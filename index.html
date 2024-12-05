@@ -15,7 +15,7 @@
                 sans-serif;
             font-size: calc(10px + 0.33vw);
             -webkit-font-smoothing: antialiased;
-            padding: 5vh 10vw;
+            padding: 4vh 10vw;
             color: #121314;
         }
 
@@ -29,7 +29,9 @@
             font-size: 2.2em;
             font-weight: 700;
             letter-spacing: -1.5px;
-        }
+            line-height: 1.2;
+            cursor: pointer;
+        }        
 
         p {
             font-size: 1.3em;
@@ -65,17 +67,18 @@
 
 <body>
     <h1>Hello.</h1>
-    <h2>My name is Jason Bai.</h2>
+    <h2>My name is <span onmouseover="this.textContent='白延云'" onmouseout="this.textContent='Jason Bai.'">Jason
+            Bai.</span></h2>
     <p>
-        I am a frontend developer based in Beijing, China, specializing in developing all kinds of web applications
-        using Vue and basic web technologies.
+        I am a frontend developer based in Beijing, China, with a strong focus on creating diverse web applications
+        using Vue.js and foundational web technologies.
     </p>
     <p>
-        I have developed many interesting projects, such as <a
+        Throughout my career, I have successfully developed a range of interesting projects, including <a
             href="https://jasonbai008.github.io/lazy-man-css/">lazy-man-css</a>, <a
             href="https://jasonbai008.github.io/vite-vue3-starter">vite-vue3-starter</a>, <a
             href="https://jasonbai008.github.io/drawer/">drawer</a>, and <a
-            href="https://jasonbai008.github.io/chives">chives</a>.
+            href="https://jasonbai008.github.io/chives">chives</a>, etc.
     </p>
 
     <p>
@@ -86,7 +89,8 @@
     <p>
         You can follow me on
         <a href="https://jasonbai008.github.io">行云流水</a>
-        where I mostly post about useful frontend technologies and other articles.
+        where I mostly post about useful frontend technologies and other articles. Additionally, feel free to explore my
+        projects on <a href="https://github.com/jasonbai008">Github</a>.
     </p>
 
 </body>
