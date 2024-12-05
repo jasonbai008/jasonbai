@@ -8,6 +8,7 @@
     <title>Jason Bai</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Inter:300,700" rel="stylesheet" />
+    <script src="./typed.min.js"></script>
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -29,9 +30,8 @@
             font-size: 2.2em;
             font-weight: 700;
             letter-spacing: -1.5px;
-            line-height: 1.2;
-            cursor: pointer;
-        }        
+            line-height: 1;
+        }
 
         p {
             font-size: 1.3em;
@@ -67,8 +67,7 @@
 
 <body>
     <h1>Hello.</h1>
-    <h2>My name is <span onmouseover="this.textContent='白延云'" onmouseout="this.textContent='Jason Bai.'">Jason
-            Bai.</span></h2>
+    <h2>My name is <span id="name"></span></h2>
     <p>
         I am a frontend developer based in Beijing, China, with a strong focus on creating diverse web applications
         using Vue.js and foundational web technologies.
@@ -92,6 +91,27 @@
         where I mostly post about useful frontend technologies and other articles. Additionally, feel free to explore my
         projects on <a href="https://github.com/jasonbai008">Github</a>.
     </p>
+
+    <script>
+        // 使用 Typed.js 创建打字效果
+        const options = {
+            strings: ['Jason Bai.', '白延云', 'Jason Bai.'], // 要打字的内容
+            typeSpeed: 80, // 打字速度
+            backSpeed: 80, // 删除速度
+            backDelay: 1000, // 删除后延迟
+            startDelay: 1000, // 开始前的延迟
+            loop: false, // 是否循环
+            showCursor: true,
+            onComplete: function (self) {
+                // 打字完成后隐藏光标
+                const cursor = document.querySelector('.typed-cursor');
+                if (cursor) {
+                    cursor.style.display = 'none'; // 隐藏光标
+                }
+            }
+        };
+        const typed = new Typed('#name', options);
+    </script>
 
 </body>
 
